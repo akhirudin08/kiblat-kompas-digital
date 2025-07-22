@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  overflow: hidden;
+}
+
+#camera, #snapshot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#arrow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 150px;
+  background: #00ff88;
+  transform-origin: bottom center;
+  z-index: 2;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+#info {
+  position: fixed;
+  bottom: 80px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  z-index: 3;
+}
+
+#controls {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+#controls button {
+  margin: 0 5px;
+  padding: 10px 14px;
+  font-size: 14px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#qr {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 8px;
+  padding: 4px;
+  z-index: 5;
+}

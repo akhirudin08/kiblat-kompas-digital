@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arah Kiblat Kamera Pro</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body>
+  <video id="camera" autoplay playsinline></video>
+  <canvas id="snapshot"></canvas>
+  <div id="arrow"></div>
+  <p id="info">Menyiapkan arah kiblat...</p>
+
+  <div id="controls">
+    <button id="reset">🔁 Reset</button>
+    <button id="capture">📷 Snap</button>
+    <button id="loc">📍 Lokasi</button>
+    <button id="share">📤 Share</button>
+  </div>
+  <canvas id="qr"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

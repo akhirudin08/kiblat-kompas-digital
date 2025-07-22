@@ -1,3 +1,4 @@
+/* RESET & BODY */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,6 +6,7 @@ body {
   overflow: hidden;
 }
 
+/* VIDEO & SNAPSHOT LAYER */
 #camera, #snapshot {
   position: fixed;
   top: 0;
@@ -15,24 +17,41 @@ body {
   z-index: 1;
 }
 
+/* ARAH KIBLAT ARROW */
 #arrow {
   position: fixed;
   top: 50%;
   left: 50%;
   width: 4px;
-  height: 150px;
-  background: #00ff88;
+  height: 170px;
+  background: linear-gradient(to top, #00ff88 80%, transparent 80%);
   transform-origin: bottom center;
   z-index: 2;
   animation: pulse 1s infinite ease-in-out;
 }
 
+/* PANAH DI UJUNG */
+#arrow::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid #00ff88;
+}
+
+/* ANIMASI DENYUT */
 @keyframes pulse {
   0% { opacity: 0.6; }
   50% { opacity: 1; }
   100% { opacity: 0.6; }
 }
 
+/* INFO TEXT */
 #info {
   position: fixed;
   bottom: 80px;
@@ -43,6 +62,7 @@ body {
   z-index: 3;
 }
 
+/* CONTROL BUTTONS */
 #controls {
   position: fixed;
   bottom: 10px;
@@ -60,8 +80,15 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+#controls button:hover {
+  background: #00ff88;
+  color: black;
+}
+
+/* QR CODE */
 #qr {
   position: fixed;
   top: 10px;
